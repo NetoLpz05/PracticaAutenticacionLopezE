@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "90965852279",
+    "project_id": "ejemplologin-e15ae",
+    "storage_bucket": "ejemplologin-e15ae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90965852279:android:5d55e536d0fa28b01d4672",
+        "android_client_info": {
+          "package_name": "jesusernesto.lopezibarra.practicaautenticacionlopeze"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUiKITZRvvLtezsEHyidlrinnTp3eG0B4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
