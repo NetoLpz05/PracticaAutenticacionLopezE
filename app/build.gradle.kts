@@ -1,15 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.gms.google-services") version "4.4.2" apply false
+    alias(libs.plugins.googleServices)
     alias(libs.plugins.crashlytics)
 }
 
 android {
     namespace = "jesusernesto.lopezibarra.practicaautenticacionlopeze"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "jesusernesto.lopezibarra.practicaautenticacionlopeze"
