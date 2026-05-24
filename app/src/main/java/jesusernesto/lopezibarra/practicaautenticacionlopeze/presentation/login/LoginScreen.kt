@@ -25,7 +25,7 @@ import jesusernesto.lopezibarra.practicaautenticacionlopeze.R
 import jesusernesto.lopezibarra.practicaautenticacionlopeze.ui.theme.*
 
 @Composable
-fun LoginScreen(auth: FirebaseAuth) {
+fun LoginScreen(auth: FirebaseAuth, navigateToHome:() -> Unit = {}) {
     var email: String by remember { mutableStateOf("") }
     var password: String by remember { mutableStateOf("") }
 
@@ -47,7 +47,7 @@ fun LoginScreen(auth: FirebaseAuth) {
         Spacer(Modifier.height(48.dp))
         Button(onClick = { auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             if(task.isSuccessful){
-                //Navegación
+                navigateToHome()
                 Log.i("aris", "Login OK")
             } else {
                 //Mostrar error

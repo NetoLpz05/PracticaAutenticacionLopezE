@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.*
 import androidx.compose.ui.text.font.*
 import androidx.compose.ui.text.style.*
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.*
@@ -65,6 +66,6 @@ fun CustomButton(modifier:Modifier, painter: Painter, title: String){
         contentAlignment = Alignment.CenterStart,){
         Image(painter = painter, contentDescription = "",
             Modifier.padding(start = 16.dp).size(16.dp))
-        Text(title, color = Color.White, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Start, fontWeight = FontWeight.Bold)
+        Text(title, color = Color.White, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center, fontWeight = FontWeight.Bold)
     }
 }

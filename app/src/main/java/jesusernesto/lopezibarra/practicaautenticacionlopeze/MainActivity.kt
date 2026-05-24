@@ -12,6 +12,8 @@ import androidx.navigation.*
 import androidx.navigation.compose.*
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.*
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.*
 import jesusernesto.lopezibarra.practicaautenticacionlopeze.ui.theme.PracticaAutenticacionLopezETheme
 

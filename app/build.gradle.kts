@@ -1,15 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.gms.google-services") version "4.4.2" apply false
+    alias(libs.plugins.googleServices)
     alias(libs.plugins.crashlytics)
 }
 
 android {
     namespace = "jesusernesto.lopezibarra.practicaautenticacionlopeze"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "jesusernesto.lopezibarra.practicaautenticacionlopeze"
@@ -56,6 +54,9 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.firestore)
+
+    implementation(libs.coil)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

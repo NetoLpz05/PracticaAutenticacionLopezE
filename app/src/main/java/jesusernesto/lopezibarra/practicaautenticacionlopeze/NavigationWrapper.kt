@@ -4,13 +4,15 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.*
 import androidx.navigation.compose.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import jesusernesto.lopezibarra.practicaautenticacionlopeze.presentation.home.HomeScreen
 import jesusernesto.lopezibarra.practicaautenticacionlopeze.presentation.initial.InitialScreen
 import jesusernesto.lopezibarra.practicaautenticacionlopeze.presentation.login.LoginScreen
 import jesusernesto.lopezibarra.practicaautenticacionlopeze.presentation.signup.SignUpScreen
 
 @Composable
 fun NavigationWrapper(navHostController: NavHostController, auth: FirebaseAuth){
-    NavHost(navController = navHostController, startDestination = "initial"){
+    NavHost(navController = navHostController, startDestination = "home"){
         composable("initial"){
             InitialScreen(
                 navigateToLogin = { navHostController.navigate("login") },
@@ -18,10 +20,13 @@ fun NavigationWrapper(navHostController: NavHostController, auth: FirebaseAuth){
             )
         }
         composable("login"){
-            LoginScreen(auth)
+            LoginScreen(auth){navHostController.navigate("home")}
         }
         composable("signUp"){
             SignUpScreen(auth)
+        }
+        composable("home"){
+            HomeScreen()
         }
     }
 }
